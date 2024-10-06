@@ -8,7 +8,7 @@ Place the code of the module into the mod/mrproject directory of your Moodle dir
 For further installation instructions please see: http://docs.moodle.org/en/Installing_contributed_modules_or_plugins
   
 ## Authors
-Current maintainer:
+Current maintainers:
 - Youcef Haddou, University of Tiaret;  <youcef.haddou@univ-tiaret.dz>
 - Talbi Omar, University of Tiaret;  <omar.talbi@univ-tiaret.dz>
 - Ouared Abdelkader, University of Tiaret;  <abdelkader.ouared@univ-tiaret.dz>
