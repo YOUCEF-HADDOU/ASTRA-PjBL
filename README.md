@@ -7,6 +7,10 @@ This program is free software; you can redistribute it and/or modify it under th
 Place the code of the module into the mod/mrproject directory of your Moodle directory root. That is, the present file should be located at: mod/mrproject/README.txt
 For further installation instructions please see: http://docs.moodle.org/en/Installing_contributed_modules_or_plugins
 
+## Features
+* f1
+* f2
+  
 ## Authors
 Current maintainer:
 - Youcef Haddou, University of Tiaret;  <youcef.haddou@univ-tiaret.dz>
@@ -22,6 +26,3 @@ The module does not use any deprecated API.
 
 ## Contributing
 Your pull request is much appreciated if you would like to add new ideas to this project and improve it.
-
-## Screenshots
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
