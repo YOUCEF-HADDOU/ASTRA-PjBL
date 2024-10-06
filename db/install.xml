@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="mod/mrproject/db" VERSION="20170205" COMMENT="XMLDB file for mrproject module"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+
+
+    <!-- mrproject instances Table: when Adding or editing the activity instance -->
+    <TABLE NAME="mrproject" COMMENT="mrproject instances">
+      <FIELDS>
+        <!-- id -->
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>                          <!-- Primary key: It fills automatically -->
+        <!-- courseid -->
+        <FIELD NAME="course" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>         <!-- Foreign key: It fills automatically -->  
+        <!-- name -->
+        <FIELD NAME="name" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false"/>
+        <!-- startdate -->  
+        <FIELD NAME="startdate" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <!-- enddate -->  
+        <FIELD NAME="enddate" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <!-- context -->
+        <FIELD NAME="intro" TYPE="text" NOTNULL="true" SEQUENCE="false"/>
+        <!-- context format -->  
+        <FIELD NAME="introformat" TYPE="int" LENGTH="4" NOTNULL="true" DEFAULT="1" SEQUENCE="false"/>     <!-- It fills automatically --> <!-- A standard field to hold the format of the field (intro). True if module supports intro (description) editor. --> 
+        <!-- problem -->
+        <FIELD NAME="problem" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
+        <!-- problem format -->  
+        <FIELD NAME="problemformat" TYPE="int" LENGTH="4" NOTNULL="true" DEFAULT="1" SEQUENCE="false"/>     <!-- It fills automatically --> <!-- A standard field to hold the format of the field (intro). True if module supports intro (description) editor. --> 
+        <!-- goal -->
+        <FIELD NAME="objective" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
+        <!-- goal format -->  
+        <FIELD NAME="objectiveformat" TYPE="int" LENGTH="4" NOTNULL="true" DEFAULT="1" SEQUENCE="false"/>     <!-- It fills automatically --> <!-- A standard field to hold the format of the field (intro). True if module supports intro (description) editor. --> 
+        <!-- time modified --> 
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>        <!-- when editing the activity instance --> 
+      </FIELDS>
+
+      <KEYS>
+        <!-- primary key -->
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key for mrproject"/>
+      </KEYS>
+    </TABLE>
+
+
+
+<!-- ************************************************************************************************* -->
+
+
+    <!-- mrproject meetings Table: when Adding or editing a meeting in the activity instance (mrproject) -->
+    <TABLE NAME="mrproject_meeting" COMMENT="mrproject meetings">
+      <FIELDS>
+        <!-- id -->
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>                             <!-- Primary key: It fills automatically -->
+        <!-- mrprojectid -->
+        <FIELD NAME="mrprojectid" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>       <!-- Foreign key -->
+        <!-- proposed date 1 -->
+        <FIELD NAME="proposeddate1" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <!-- proposed date 2 -->
+        <FIELD NAME="proposeddate2" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <!-- proposed date 3 -->
+        <FIELD NAME="proposeddate3" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <!-- start time -->
+        <FIELD NAME="starttime" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <!-- duration -->
+        <FIELD NAME="duration" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <!-- Meeting mode -->
+        <FIELD NAME="meetingmode" TYPE="int" LENGTH="4" NOTNULL="false" DEFAULT="0" SEQUENCE="false"/>
+        <!-- Task location -->
+        <FIELD NAME="tasklocation" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
+        <!-- teacherid (Meeting with): the creator of the meeting -->
+        <FIELD NAME="teacherid" TYPE="int" LENGTH="11" NOTNULL="false" DEFAULT="0" SEQUENCE="false"/>
+        <!-- Meeting purpose -->
+        <FIELD NAME="meetingpurpose" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
+        <!-- Meeting purpose format --> 
+        <FIELD NAME="meetingpurposeformat" TYPE="int" LENGTH="4" NOTNULL="true" DEFAULT="1" SEQUENCE="false"/>
+        <!-- Meeting outcomes -->
+        <FIELD NAME="meetingoutcomes" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
+        <!-- Meeting outcomes format --> 
+        <FIELD NAME="meetingoutcomesformat" TYPE="int" LENGTH="4" NOTNULL="true" DEFAULT="1" SEQUENCE="false"/>
+        <!-- meetingaccepted --> 
+        <FIELD NAME="meetingaccepted" TYPE="int" LENGTH="4" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <!-- meetingheld -->
+        <FIELD NAME="meetingheld" TYPE="int" LENGTH="4" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <!-- Feedback by teacher -->
+        <FIELD NAME="feedbackbyteacher" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
+        <!-- Feedback by teacher format --> 
+        <FIELD NAME="feedbackbyteacherformat" TYPE="int" LENGTH="4" NOTNULL="true" DEFAULT="1" SEQUENCE="false"/>
+        <!-- Competency -->
+        <FIELD NAME="competency" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
+        <!-- isdeleted -->
+        <FIELD NAME="isdeleted" TYPE="int" LENGTH="4" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <!-- time modified --> 
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>      <!-- when editing the meeting -->
+      </FIELDS>
+
+      <KEYS>
+        <!-- primary key -->
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key for mrproject_meeting"/>
+      </KEYS>
+      <INDEXES>
+        <!-- Put an index on the fields mrprojectid and teacherid. In order to optimizing our database query -->
+        <INDEX NAME="mrprojectid-teacherid" UNIQUE="false" FIELDS="mrprojectid, teacherid" COMMENT="By mrproject id, then teacher id"/>
+      </INDEXES>
+    </TABLE>
+
+
+
+<!-- ************************************************************************************************* -->
+
+
+    <!-- mrproject tasks Table:  task grade and notes -->
+    <TABLE NAME="mrproject_task" COMMENT="mrproject tasks">
+      <FIELDS>
+        <!-- id -->
+        <FIELD NAME="id" TYPE="int" LENGTH="11" NOTNULL="true" SEQUENCE="true"/>              <!-- Primary key: It fills automatically -->
+        <!-- meetingid -->
+        <FIELD NAME="meetingid" TYPE="int" LENGTH="11" NOTNULL="true" SEQUENCE="false"/>         <!-- Foreign key -->
+        <!-- studentid -->
+        <FIELD NAME="studentid" TYPE="int" LENGTH="11" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <!-- Attended (null: no presence , '6+7':  attendees are users with id 6 and 7) -->
+        <FIELD NAME="attended" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
+        <!-- defined task -->
+        <FIELD NAME="tasknote" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
+        <!-- defined task format -->
+        <FIELD NAME="tasknoteformat" TYPE="int" LENGTH="4" NOTNULL="true" DEFAULT="1" SEQUENCE="false"/>
+        <!-- collectivetask (null: is not a collective task, '6+7':  student 6 + student 7) -->
+        <FIELD NAME="collectivetask" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
+        <!-- startingdate -->  
+        <FIELD NAME="startingdate" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <!-- duedate -->
+        <FIELD NAME="duedate" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <!-- submissiondate -->  
+        <FIELD NAME="submissiondate" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <!-- completion rate --> 
+        <FIELD NAME="completionrate" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <!-- grade -->
+        <FIELD NAME="grade" TYPE="float" NOTNULL="false" SEQUENCE="false"/>
+        <!-- studentNote (Appreciation) -->
+        <FIELD NAME="studentnote" TYPE="text" NOTNULL="false" SEQUENCE="false"/>  
+        <!-- studentNote format -->
+        <FIELD NAME="studentnoteformat" TYPE="int" LENGTH="4" NOTNULL="true" DEFAULT="1" SEQUENCE="false"/>
+        <!-- evaluatedby -->
+        <FIELD NAME="evaluatedby" TYPE="int" LENGTH="11" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <!-- time modified -->
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="11" NOTNULL="false" SEQUENCE="false"/>
+      </FIELDS>
+
+      <KEYS>
+        <!-- primary key -->
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key for mrproject_task"/>
+      </KEYS>
+      <INDEXES>
+        <!-- Put an index on the field meetingid. In order to optimizing our database query -->
+        <INDEX NAME="meetingid" UNIQUE="false" FIELDS="meetingid" COMMENT="By meeting id"/>
+        <!-- Put an index on the field studentid. In order to optimizing our database query -->
+        <INDEX NAME="studentid" UNIQUE="false" FIELDS="studentid" COMMENT="By student id"/>
+      </INDEXES>
+    </TABLE>
+
+
+<!-- ************************************************************************************************* -->
+
+
+    <!-- mrproject dependencies Table -->
+    <TABLE NAME="mrproject_dependency" COMMENT="mrproject dependencies">
+      <FIELDS>
+        <!-- id -->
+        <FIELD NAME="id" TYPE="int" LENGTH="11" NOTNULL="true" SEQUENCE="true"/>              <!-- Primary key: It fills automatically -->
+        <!-- taskid -->
+        <FIELD NAME="taskid" TYPE="int" LENGTH="11" NOTNULL="true" SEQUENCE="false"/>         <!-- Foreign key -->
+        <!-- dependency -->
+        <FIELD NAME="dependency" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
+        <!-- link -->
+        <FIELD NAME="link" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>
+        <!-- consumedtime -->
+        <FIELD NAME="consumedtime" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+        <!-- time modified -->
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="11" NOTNULL="false" SEQUENCE="false"/>
+      </FIELDS>
+
+      <KEYS>
+        <!-- primary key -->
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key for mrproject_dependency"/>
+      </KEYS>
+      <INDEXES>
+        <!-- Put an index on the field taskid. In order to optimizing our database query -->
+        <INDEX NAME="taskid" UNIQUE="false" FIELDS="taskid" COMMENT="By task id"/>
+      </INDEXES>
+    </TABLE>
+    
+
+<!-- ************************************************************************************************* -->
+
+
+    <!-- mrproject recommended dependencies Table -->
+    <TABLE NAME="mrproject_recommendation" COMMENT="mrproject recommended dependencies">
+      <FIELDS>
+        <!-- id -->
+        <FIELD NAME="id" TYPE="int" LENGTH="11" NOTNULL="true" SEQUENCE="true"/>                 <!-- Primary key: It fills automatically -->
+        <!-- dependencyid -->
+        <FIELD NAME="dependencyid" TYPE="int" LENGTH="11" NOTNULL="true" SEQUENCE="false"/>      <!-- Foreign key -->
+        <!-- recommendedby -->
+        <FIELD NAME="recommendedby" TYPE="int" LENGTH="11" NOTNULL="true" SEQUENCE="false"/>
+        <!-- time modified -->
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="11" NOTNULL="false" SEQUENCE="false"/>
+      </FIELDS>
+
+      <KEYS>
+        <!-- primary key -->
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key for mrproject_recommended_dependency"/>
+      </KEYS>
+      <INDEXES>
+        <!-- Put an index on the field dependencyid. In order to optimizing our database query -->
+        <INDEX NAME="dependencyid" UNIQUE="false" FIELDS="dependencyid" COMMENT="By dependency id"/>
+      </INDEXES>
+    </TABLE>
+
+
+
+  </TABLES>
+</XMLDB>

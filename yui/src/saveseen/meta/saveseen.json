@@ -1,0 +1,7 @@
+{
+    "moodle-mod_mrproject-saveseen": {
+        "requires": [
+            "base", "node", "event"
+        ]
+    }
+}

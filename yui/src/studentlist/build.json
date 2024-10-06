@@ -1,0 +1,10 @@
+{
+    "name": "moodle-mod_mrproject-studentlist",
+    "builds": {
+        "moodle-mod_mrproject-studentlist": {
+            "jsfiles": [
+                "studentlist.js"
+            ]
+        }
+    }
+}

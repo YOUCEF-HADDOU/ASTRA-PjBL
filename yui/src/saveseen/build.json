@@ -1,0 +1,10 @@
+{
+    "name": "moodle-mod_mrproject-saveseen",
+    "builds": {
+        "moodle-mod_mrproject-saveseen": {
+            "jsfiles": [
+                "saveseen.js"
+            ]
+        }
+    }
+}

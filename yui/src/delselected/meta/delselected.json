@@ -1,0 +1,7 @@
+{
+    "moodle-mod_mrproject-delselected": {
+        "requires": [
+            "base", "node", "event"
+        ]
+    }
+}

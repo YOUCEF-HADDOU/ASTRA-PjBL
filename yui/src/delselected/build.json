@@ -1,0 +1,10 @@
+{
+    "name": "moodle-mod_mrproject-delselected",
+    "builds": {
+        "moodle-mod_mrproject-delselected": {
+            "jsfiles": [
+                "delselected.js"
+            ]
+        }
+    }
+}

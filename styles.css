@@ -1,0 +1,472 @@
+.path-mod-mrproject .timelabel {
+    color: #808080;
+}
+
+.path-mod-mrproject .attended {
+    color: green;
+}
+
+.path-mod-mrproject div.otherstudent.highlight {
+    font-weight: bold;
+}
+
+.path-mod-mrproject div.meetingnotes {
+    background-color: #e8e9ee;
+    border: solid 1px #a7abbe;
+    font-size: 0.9em;
+    padding: 2px;
+    margin: 1px;
+}
+
+div .path-mod-mrproject .tasknote {
+    background-color: #e7efe7;
+    border: solid 1px #a0c5a4;
+    font-size: 0.9em;
+    padding: 2px;
+    margin: 1px;
+}
+
+.path-mod-mrproject #meetingbookertable {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.path-mod-mrproject #meetingbookertable {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.path-mod-mrproject div.bookercontrols {
+    text-align: center;
+}
+
+.path-mod-mrproject div.studentlist.expanded {
+    display: block;
+}
+
+.path-mod-mrproject div.studentlist.collapsed {
+    display: none;
+}
+
+.path-mod-mrproject div.commandbar {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #eee;
+    padding: 0.5em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+/* Reduce space usage by single buttons in table cells */
+.path-mod-mrproject table div.singlebutton div {
+    margin-bottom: 0;
+}
+.path-mod-mrproject table div.singlebutton input {
+    margin: 0;
+}
+
+.path-mod-mrproject div.commandbar span.title {
+    float: left;
+    clear: right;
+    width: 8em;
+    text-align: left;
+    font-weight: bold;
+}
+
+.path-mod-mrproject div.commandbar .moodle-actionmenu {
+    display: inline-block !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.path-mod-mrproject div.commandbar .moodle-actionmenu.show[data-enhanced] .menu.align-tr-br {
+    left: 0;
+    right: auto;
+}
+
+.path-mod-mrproject div.commandbar .moodle-actionmenu .menubar {
+    width: 12em;
+}
+
+.path-mod-mrproject .moodle-actionmenu img.iconsmall {
+    width: auto;
+}
+.path-mod-mrproject .moodle-actionmenu .menu-action-text {
+    display: inline;
+}
+
+
+body.path-mod-mrproject input.meetingselect {
+    display: none;
+}
+body.path-mod-mrproject.jsenabled input.meetingselect {
+    display: inline;
+}
+
+body.path-mod-mrproject.jsenabled  input.studentselectsubmit {
+    display: none;
+}
+
+.path-mod-mrproject img.statictickbox {
+    padding-right: 5px;
+}
+
+.path-mod-mrproject .maildisplay {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #eee;
+    text-align: center;
+}
+
+.path-mod-mrproject div.schedulelist.halfsize {
+    width: 46%;
+    display: inline-table;
+    padding: 3px;
+}
+
+.path-mod-mrproject div.schedulelist.fullsize {
+    width: 96%;
+    display: block;
+    padding: 3px;
+}
+
+.path-mod-mrproject div.schedulelist div.singlebutton,
+.path-mod-mrproject div.schedulelist div.singlebutton form {
+    display: inline;
+}
+
+.path-mod-mrproject div.actionmessage {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    border: solid 2px;
+    padding: 5px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.path-mod-mrproject div.actionmessage.success {
+    background-color: #96fca6;
+    border-color: #14fa34;
+}
+
+.path-mod-mrproject div.actionmessage.error {
+    background-color: #ffb2b8;
+    border-color: #f40000;
+}
+
+.path-mod-mrproject div.totalgrade {
+    padding-bottom: 25px;
+}
+.path-mod-mrproject dl.totalgrade dl {
+    width: 100%;
+}
+.path-mod-mrproject dl.totalgrade dt {
+    float: left;
+    clear: left;
+    width: 30%;
+}
+.path-mod-mrproject dl.totalgrade dd {
+    float: left;
+    width: 60%;
+}
+
+.path-mod-mrproject div.dropdownmenu {
+    display: inline-block;
+    padding-right: 1em;
+}
+
+.path-mod-mrproject div.dropdownmenu select {
+    vertical-align: middle;
+}
+
+/* Format data fields in vertical rather than horizontal list. */
+
+.path-mod-mrproject #id_datafieldhdr .form-group,
+.path-mod-mrproject #id_datafieldhdr .fitem_fgroup {
+    float: left;
+    clear: none;
+}
+
+.path-mod-mrproject #id_datafieldhdr .col-md-3,
+.path-mod-mrproject #id_datafieldhdr fieldset.fgroup {
+    width: 100%;
+    text-align: left;
+    margin-left: 0;
+}
+
+.path-mod-mrproject #id_datafieldhdr .col-md-9 {
+    float: none;
+    width: 100%;
+}
+
+.path-mod-mrproject #id_datafieldhdr .col-form-label,
+.path-mod-mrproject #id_datafieldhdr .fitemtitle {
+    font-weight: bold;
+    text-align: left;
+}
+
+.path-mod-mrproject #id_datafieldhdr .form-group .felement .fitem,
+.path-mod-mrproject #id_datafieldhdr fieldset.fgroup > span {
+    clear: left;
+    float: left;
+    margin-left: 0.5em;
+}
+
+
+div .definedtask {
+    background-color: #f6f4f4;
+    height: 90px;
+    width: 470px;
+    border: 0px solid #979a97;
+    background-color: #dce4dc;
+    display: block;
+    margin-top: -8px;
+    margin-bottom: -8px;
+    margin-right: -10px;
+    padding: 2px;
+
+    overflow-x: auto;
+    overflow-y: auto;
+    text-align: justify;
+
+    scrollbar-color: #adc3ad #dce4dc;
+    scrollbar-width: thin;
+}
+
+
+
+.userinfobox1 {
+    width: 100%;
+    background-color: #E6E6FA;
+    border: 1px solid #202020;
+    margin-top: 25px;
+    position: relative; 
+}
+
+.projecttitle{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #202020;
+    padding: 3px;
+    width: 75%;
+    text-align: center;
+    font-family: fantasy;
+    border: 1px solid #202020;
+    /*color: #B8860B;*/
+    color: #F5F5F5;
+    font-size: 25px;
+    margin-top: -25px;  
+    
+}
+
+
+.title0 {
+    font-family: Rockwell;
+    font-size: 25px;  
+    padding-inline-start: 20px;
+    margin-top: -40px;
+    color: #004953;
+    
+}
+
+.title1 {
+    font-family: fantasy;
+    font-size: 20px;  
+    padding-inline-start: 20px;
+}
+
+.title2 {
+    font-size: 20px;
+    font-family: courier;
+    padding-inline-start: 20px; 
+    color: #004953;
+    /*margin-top: -10px;*/
+    
+}
+
+
+
+
+
+
+div .contentwelcome {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    padding-inline-start: 20px;
+    color: 	#101010;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+.team {
+    font-size: 18px;
+    font-family: courier;
+    padding-inline-start: 20px;
+}
+
+
+div .grouplogo {
+    height: 90px;
+    width: 90px;
+    border: 1.5px solid #707070;
+    background-color: 	#DCDCDC;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center; 
+    padding-top: 20px;
+    margin-top: 3px;
+    margin-bottom: -10px;
+}
+
+.imglogo {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 3px;
+    margin-bottom: -20px;
+}
+
+
+div .smallgrouplogo {
+    height: 35px;
+    width: 35px;
+    border: 1.5px solid #707070;
+    background-color: #DCDCDC;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    padding: 4px 0px 0px 0px;
+}
+
+
+
+div .repeatelements {
+    background-color: #e18383;
+    height: 90px;
+    width: 460px;
+    border: 2px solid #979a97;
+    display: none;
+}
+
+
+div .copyright {
+    margin: auto;
+    width: 70%;
+    text-align: center;
+    font-family: courier;
+    font-size: 12px;
+    color: gray;
+}
+
+div .madewith {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    font-size: 10px;
+    font-family: courier;
+    color: gray;
+}
+
+
+.teamlogo {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+.teamlogostudent {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin-bottom: 0px;
+}
+
+
+.traces {
+    font-weight: bold;
+    
+    border-width: 10px;
+    padding: 1px; 
+    text-decoration: underline;
+    text-decoration-color: #0066b2;
+    display: inline;
+}
+
+
+div .proposeddates {
+    display: inline-block;
+}
+
+
+.submittedtask {
+    color: #0db352;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+
+.timedouttask {
+    color: crimson;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+
+.submitted {
+    color: #0db352;
+    font-weight: bold;
+    pointer-events: none;
+    float: right;
+}
+
+.notyetsubmitted {
+    color: crimson;
+    font-weight: bold;
+    pointer-events: none;
+    float: right;
+}
+
+
+.disabledstudent {
+    color: #000000;
+    pointer-events: none;
+}
+
+
+.enabledstudent {
+    color: #3CB371;
+    font-weight: bold;
+    text-decoration: underline dotted;
+}
+
+
+.recommend {
+    color: #3CB371;
+    font-weight: bold;
+    text-decoration: underline dotted;
+    float: right;
+    
+}
+
+
+.recommended {
+    color: #3CB371;
+    font-weight: bold;
+    text-decoration: underline dotted;
+    float: right;
+}
+
+
+.recommend2 {
+    color: #3CB371;
+    font-weight: bold;
+}
+
+
+.recommended2 {
+    color: #3CB371;
+    font-weight: bold;
+}
+
+
