@@ -6,10 +6,6 @@ This program is free software; you can redistribute it and/or modify it under th
 ## Installation instructions
 Place the code of the module into the mod/mrproject directory of your Moodle directory root. That is, the present file should be located at: mod/mrproject/README.txt
 For further installation instructions please see: http://docs.moodle.org/en/Installing_contributed_modules_or_plugins
-
-## Features
-* f1
-* f2
   
 ## Authors
 Current maintainer:
