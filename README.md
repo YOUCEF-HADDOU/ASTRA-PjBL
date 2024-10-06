@@ -15,10 +15,13 @@ Current maintainer:
 - Chadli Abdelhafid, University of Tiaret;  <abdelhafith.chadli@univ-tiaret.dz>
 
 ## Release notes
-This module is intended for Moodle 3.10 and above.
+This module is intended for **Moodle 3.10** and above.
 
 ## Technical notes
 The module does not use any deprecated API.
 
 ## Contributing
 Your pull request is much appreciated if you would like to add new ideas to this project and improve it.
+
+## Screenshots
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
