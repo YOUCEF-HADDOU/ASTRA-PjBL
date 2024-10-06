@@ -1,5 +1,5 @@
 # ASTRA-PjBL :satellite:
-## Description
+## **Description**
 This plugin (Activity module) is based on a collaborative learning methodology: Project-Based Learning. PjBL is a teaching method in which students learn by actively engaging in real-world and personally meaningful projects.
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
 
