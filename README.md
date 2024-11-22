@@ -1,6 +1,7 @@
 # ASTRA-PjBL :satellite:
 ## Description
-This plugin (Activity module) is based on a collaborative learning methodology: Project-Based Learning. PjBL is a teaching method in which students learn by actively engaging in real-world and personally meaningful projects.
+* This plugin (Activity module) is based on a collaborative learning methodology: Project-Based Learning (PjBL). In this teaching method, students learn by actively engaging in real-world and personally meaningful projects.
+* ASTRA-PjBL can greatly assist instructors and student teams in their learning activities.
 
 ## Installation instructions
 Place the code of the module into the mod/mrproject directory of your Moodle directory root. That is, the present file should be located at: mod/mrproject/README.txt
